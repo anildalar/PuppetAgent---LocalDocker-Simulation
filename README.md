@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip
 
 # Install Puppet agent
-RUN apt-get install -y wget
+RUN apt-get install -y wget vim
 RUN wget https://apt.puppet.com/puppet7-release-focal.deb
 RUN dpkg -i puppet7-release-focal.deb
 RUN apt-get update && apt-get install -y puppet-agent
