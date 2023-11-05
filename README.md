@@ -1,6 +1,6 @@
 # PuppetAgent---LocalDocker-Simulation
 PuppetAgent - LocalDocker Simulation
-
+<pre>
 
 # Use the Ubuntu base image
 FROM ubuntu:latest
@@ -24,3 +24,4 @@ RUN apt-get update && apt-get install -y puppet-agent
 
 # Set the Puppet agent command with the hosts file modification as the entry point
 CMD sh -c "echo '172.18.0.2 puppet' | sudo tee -a /etc/hosts > /dev/null && sudo /opt/puppetlabs/bin/puppet agent --no-daemonize --verbose"
+</pre>
