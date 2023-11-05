@@ -25,3 +25,12 @@ RUN apt-get update && apt-get install -y puppet-agent
 # Set the Puppet agent command with the hosts file modification as the entry point
 CMD sh -c "echo '172.18.0.2 puppet' | sudo tee -a /etc/hosts > /dev/null && sudo /opt/puppetlabs/bin/puppet agent --no-daemonize --verbose"
 </pre>
+docker image build -t puppet-agent:t1 .
+
+docker run -d --name puppet-agent-node1  puppet-agent1:t1
+docker run -d --name puppet-agent-node2  puppet-agent1:t1
+docker run -d --name puppet-agent-node3  puppet-agent1:t1
+docker run -d --name puppet-agent-node4  puppet-agent1:t1
+docker run -d --name puppet-agent-node5  puppet-agent1:t1
+...
+...
