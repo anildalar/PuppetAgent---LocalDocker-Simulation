@@ -28,11 +28,11 @@ CMD sh -c "echo '172.18.0.2 puppet' | sudo tee -a /etc/hosts > /dev/null && sudo
 <pre>
 docker image build -t puppet-agent:t1 .
 
-docker run -d --name puppet-agent-node1  puppet-agent1:t1
-docker run -d --name puppet-agent-node2  puppet-agent1:t1
-docker run -d --name puppet-agent-node3  puppet-agent1:t1
-docker run -d --name puppet-agent-node4  puppet-agent1:t1
-docker run -d --name puppet-agent-node5  puppet-agent1:t1
+docker run -d --name puppet-agent-node1  puppet-agent:t1
+docker run -d --name puppet-agent-node2  puppet-agent:t1
+docker run -d --name puppet-agent-node3  puppet-agent:t1
+docker run -d --name puppet-agent-node4  puppet-agent:t1
+docker run -d --name puppet-agent-node5  puppet-agent:t1
 ...
 ...
 </pre>
