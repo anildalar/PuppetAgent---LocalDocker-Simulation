@@ -1,8 +1,10 @@
 # PuppetAgent---LocalDocker-Simulation
 PuppetAgent - LocalDocker Simulation
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name_or_id>
+
 
 <pre>
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <puppet_server_container_name_or_id>
 # Use a base image (choose an appropriate base image)
 FROM ubuntu:latest
 
