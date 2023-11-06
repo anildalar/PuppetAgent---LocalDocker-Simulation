@@ -4,7 +4,7 @@ PuppetAgent - LocalDocker Simulation
 
 <pre>
 
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <puppet_server_container_name_or_id>
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' puppet_server_container_name_or_id
 
 
 
